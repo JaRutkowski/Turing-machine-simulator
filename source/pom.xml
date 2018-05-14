@@ -16,13 +16,15 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.0.BUILD-SNAPSHOT</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
 	</parent>
 
 	<properties>
+		<java.version>10</java.version>
+		<lombok.version>1.16.20</lombok.version>
+		<springbootJavafxSupport.version>2.1.6</springbootJavafxSupport.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>10</java.version>
 	</properties>
 
 	<dependencies>
@@ -30,11 +32,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,7 +45,7 @@
 		<dependency>
 			<groupId>de.roskenet</groupId>
 			<artifactId>springboot-javafx-support</artifactId>
-			<version>2.1.6</version>
+			<version>${springbootJavafxSupport.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -97,5 +98,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
 </project>

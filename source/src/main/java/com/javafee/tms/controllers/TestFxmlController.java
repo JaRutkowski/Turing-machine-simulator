@@ -11,6 +11,7 @@ public class TestFxmlController {
 
 	@FXML
 	private Button btnTest;
+	
 	@FXML
 	private TextField textFieldTest;
 
