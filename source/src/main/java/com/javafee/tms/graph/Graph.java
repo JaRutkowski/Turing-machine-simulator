@@ -1,6 +1,6 @@
 package com.javafee.tms.graph;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.javafee.tms.graph.elements.Edge;
@@ -8,13 +8,8 @@ import com.javafee.tms.graph.elements.Node;
 
 abstract public class Graph {
 	
-	protected List<Node> nodes;
-	protected List<Edge> edges;
-
-	public Graph() {
-		nodes = new ArrayList<Node>();
-		edges = new ArrayList<Edge>();
-	}
+	protected List<Node> nodes = new LinkedList<Node>();
+	protected List<Edge> edges = new LinkedList<Edge>();
 
 	public List<Node> getNodes() {
 		return nodes;
@@ -32,18 +27,18 @@ abstract public class Graph {
 		this.edges = edges;
 	}
 
-	public void addNode(Node w) {
-		this.nodes.add(w);
+	public void addNode(Node node) {
+		this.nodes.add(node);
 	}
 
-	public void addKrawedz(Edge k) {
-		this.edges.add(k);
+	public void addEdge(Edge edge) {
+		this.edges.add(edge);
 	}
 
-	public Node findNodeByNumber(int number) {
+	public Node findNodeByNumber(Integer number) {
 		Node resultNode = null;
 
-		for (Node node : nodes) {
+		for (Node node : nodes) {              // do przemyślenia wyrażenie lambda
 			if (node.getNumber() == number) {
 				resultNode = node;
 				break;

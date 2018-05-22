@@ -14,7 +14,6 @@ public class TuringEdge extends Edge {
 		this.oldSymbol = oldSymbol;
 		this.newSymbol = newSymbol;
 		this.curve = curve;
-
 	}
 
 	public String getOldState() {

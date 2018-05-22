@@ -10,11 +10,6 @@ import com.javafee.tms.graph.utils.exceptions.IllegalEdgeTypeException;
 
 public class TuringGraph extends DirectedGraph {
 
-	public TuringGraph() {
-		nodes = new ArrayList<Node>();
-		edges = new ArrayList<Edge>();
-	}
-
 	@Override
 	public void setEdges(List<Edge> edges) {
 		edges.forEach(e -> {
