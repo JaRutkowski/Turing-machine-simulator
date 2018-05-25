@@ -7,5 +7,5 @@ public class IllegalEdgeTypeException extends IllegalArgumentException {
 	public IllegalEdgeTypeException(String message) {
 		super(message);
 	}
-	
+
 }

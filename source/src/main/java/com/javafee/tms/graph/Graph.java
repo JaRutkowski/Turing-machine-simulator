@@ -7,15 +7,20 @@ import com.javafee.tms.graph.elements.Edge;
 import com.javafee.tms.graph.elements.Node;
 
 abstract public class Graph {
-	
-	protected List<Node> nodes = new LinkedList<Node>();
-	protected List<Edge> edges = new LinkedList<Edge>();
+
+	protected LinkedList<Node> nodes = new LinkedList<Node>();
+	protected LinkedList<Edge> edges = new LinkedList<Edge>();
+
+	public Graph(LinkedList<Node> nodes, LinkedList<Edge> edges) {
+		this.nodes = nodes;
+		this.edges = edges;
+	}
 
 	public List<Node> getNodes() {
 		return nodes;
 	}
 
-	public void setNodes(List<Node> nodes) {
+	public void setNodes(LinkedList<Node> nodes) {
 		this.nodes = nodes;
 	}
 
@@ -23,7 +28,7 @@ abstract public class Graph {
 		return edges;
 	}
 
-	public void setEdges(List<Edge> edges) {
+	public void setEdges(LinkedList<Edge> edges) {
 		this.edges = edges;
 	}
 
@@ -38,7 +43,7 @@ abstract public class Graph {
 	public Node findNodeByNumber(Integer number) {
 		Node resultNode = null;
 
-		for (Node node : nodes) {              // do przemyślenia wyrażenie lambda
+		for (Node node : nodes) { // do przemyślenia wyrażenie lambda
 			if (node.getNumber() == number) {
 				resultNode = node;
 				break;

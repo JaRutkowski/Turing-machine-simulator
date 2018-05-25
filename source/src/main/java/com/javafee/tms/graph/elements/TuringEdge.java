@@ -1,7 +1,7 @@
 package com.javafee.tms.graph.elements;
 
 public class TuringEdge extends Edge {
-	
+
 	private String oldState;
 	private String newState;
 	private String oldSymbol;
