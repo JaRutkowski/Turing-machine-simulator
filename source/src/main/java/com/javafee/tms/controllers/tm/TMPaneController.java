@@ -21,7 +21,7 @@ public class TMPaneController {
 	private Parent tmConfigurationPane;
 
 	@FXML
-	private Parent tmTypePane;
+	private Parent tmTapePane;
 
 	@FXML
 	private Parent tmNavigationPane;

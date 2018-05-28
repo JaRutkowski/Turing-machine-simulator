@@ -49,9 +49,9 @@
 		</AnchorPane>
 		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="3">
 			<children>
-				<AnchorPane fx:id="tmTypePane" maxHeight="-Infinity" prefHeight="586.0" prefWidth="339.0">
+				<AnchorPane fx:id="tmTapePane" maxHeight="-Infinity" prefHeight="586.0" prefWidth="339.0">
 					<children>
-						<fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="TMTypePane.fxml" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+						<fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="TMTapePane.fxml" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
 					</children>
 					<HBox.margin>
 						<Insets top="3.0" />
