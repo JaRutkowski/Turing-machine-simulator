@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="443.0" style="-fx-background-color: #22ACE6;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafee.tms.controllers.graph.GraphPaneController">
+	<content>
+		<AnchorPane prefHeight="275.0" prefWidth="439.0">
+         <children>
+            <SubScene height="268.0" width="434.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+         </children></AnchorPane>
+	</content>
+	<effect>
+		<DropShadow color="#8c8c8c" height="26.96" radius="12.682500000000001" spread="0.51" width="25.77" />
+	</effect>
+</ScrollPane>

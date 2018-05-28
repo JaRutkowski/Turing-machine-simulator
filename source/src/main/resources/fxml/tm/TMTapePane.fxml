@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0"
+	prefWidth="1807.0" xmlns="http://javafx.com/javafx/9.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.javafee.tms.controllers.tm.TMTapePaneController">
+	<children>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+		<Rectangle arcHeight="7.0" arcWidth="6.0" fill="#ffffff"
+			height="51.0" stroke="#22ace6" strokeType="INSIDE" width="38.0">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" color="#8c8c8c" />
+			</effect>
+		</Rectangle>
+	</children>
+</HBox>
