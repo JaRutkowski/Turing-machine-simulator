@@ -233,7 +233,9 @@ public class TuringGraphMapper {
 		dataString = bufferedReader.readLine();
 		if (dataString == null) {
 			defaultTape = new Tape("[" + Tape.getFillSymbol() + "]");
-		}
+		} 
+		
+		else {
 		stok = new StringTokenizer(dataString);
 
 		do {
@@ -253,6 +255,8 @@ public class TuringGraphMapper {
 			}
 			stok = new StringTokenizer(dataString);
 		} while (true);
+		
+		}
 
 		if (tapes.size() == 0) {
 			defaultTape = new Tape("[" + Tape.getFillSymbol() + "]");
