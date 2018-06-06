@@ -1,16 +1,13 @@
-package com.javafee.tms.mapper;
+package com.javafee.tms.services.mapper;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Service;
 
 import com.javafee.tms.graph.Graph;
 import com.javafee.tms.graph.directed.TuringGraph;
@@ -20,13 +17,13 @@ import com.javafee.tms.graph.elements.TuringEdge;
 import com.javafee.tms.graph.elements.TuringNode;
 import com.javafee.tms.turing.Tape;
 
+@Service
 public class TuringGraphMapper {
 
-	BufferedReader bufferedReader;
-	FileOutputStream fileOutputStream;
-	Integer line;
-	LinkedList<String> tapes = new LinkedList<String>();
-	Tape defaultTape;
+	private BufferedReader bufferedReader;
+	private Integer line;
+	private LinkedList<String> tapes = new LinkedList<String>();
+	private Tape defaultTape;
 
 	public Tape getDefaultTape() {
 		if (defaultTape == null) {
@@ -57,11 +54,6 @@ public class TuringGraphMapper {
 		LinkedList<Node> nodes = new LinkedList<Node>();
 		LinkedList<Edge> edges = new LinkedList<Edge>();
 		StringTokenizer stok;
-
-		@SuppressWarnings("resource")
-		ApplicationContext appContext = new ClassPathXmlApplicationContext();
-		@SuppressWarnings("unused")
-		Resource resource = appContext.getResource("file:c:\\" + fileName);
 
 		tapes = new LinkedList<String>();
 
@@ -99,7 +91,6 @@ public class TuringGraphMapper {
 		stok = new StringTokenizer(dataString);
 
 		// get all nodes
-
 		do {
 
 			if (dataString.startsWith("//") || stok.countTokens() == 0) {
@@ -112,7 +103,6 @@ public class TuringGraphMapper {
 				continue;
 			}
 			if ((stok.countTokens() != TuringNode.FIELDS)) {
-
 				// wrong number of parameters in line
 				return null;
 			}
@@ -178,7 +168,6 @@ public class TuringGraphMapper {
 		stok = new StringTokenizer(dataString);
 
 		// get all edges
-
 		do {
 			if (dataString.startsWith("//") || stok.countTokens() == 0) {
 				dataString = bufferedReader.readLine();
@@ -212,7 +201,6 @@ public class TuringGraphMapper {
 
 			// add edge to List of edges, but check if adding this edge makes TM
 			// nondeterministic
-
 			if (!oldState.equals(newState) || !oldSymbol.equals(newSymbol)) {
 
 				for (Edge edge : edges) {
