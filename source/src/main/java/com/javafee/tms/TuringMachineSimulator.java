@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.javafee.tms.utils.Constans;
+
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -30,8 +32,8 @@ public class TuringMachineSimulator extends Application {
 	public void init() throws Exception {
 
 		springContext = SpringApplication.run(TuringMachineSimulator.class);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SplashScreenPane.fxml"),
-				ResourceBundle.getBundle("language.messages_pl_PL"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constans.MAIN_SPLASH_SCREEN_IMAGE),
+				ResourceBundle.getBundle(Constans.PL_LANGUAGE_RESOURCE_BUNDLE));
 		fxmlLoader.setControllerFactory(springContext::getBean);
 		rootNode = fxmlLoader.load();
 
@@ -44,8 +46,8 @@ public class TuringMachineSimulator extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("/icon/tree-icon.png")));
-		stage.setTitle(ResourceBundle.getBundle("language.messages").getString("config.appName"));
+		stage.getIcons().add(new Image(getClass().getResourceAsStream(Constans.MAIN_ICON_IMAGE)));
+		stage.setTitle(ResourceBundle.getBundle(Constans.PL_LANGUAGE_RESOURCE_BUNDLE).getString("config.appName"));
 		stage.setScene(new Scene(rootNode));
 		stage.show();
 	}

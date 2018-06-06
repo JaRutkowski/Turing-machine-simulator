@@ -1,11 +1,13 @@
 package com.javafee.tms.services.mapper;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,9 @@ import com.javafee.tms.graph.elements.TuringEdge;
 import com.javafee.tms.graph.elements.TuringNode;
 import com.javafee.tms.turing.Tape;
 
+import lombok.extern.java.Log;
+
+@Log
 @Service
 public class TuringGraphMapper {
 
@@ -39,17 +44,12 @@ public class TuringGraphMapper {
 		return tapes;
 	}
 
-	public Graph getGraph(String fileName) throws IOException {
+	public Graph getGraph(File file) throws IOException {
 
 		boolean fillSymbolChanged = false;
 		Integer action;
 		Double nodeXCord, nodeYCord, curve;
-		String dataString;
-		String name;
-		String oldState;
-		String newState;
-		String oldSymbol;
-		String newSymbol;
+		String dataString, name, oldState, newState, oldSymbol, newSymbol;
 		TuringNode turingNode;
 		LinkedList<Node> nodes = new LinkedList<Node>();
 		LinkedList<Edge> edges = new LinkedList<Edge>();
@@ -58,9 +58,9 @@ public class TuringGraphMapper {
 		tapes = new LinkedList<String>();
 
 		try {
-			bufferedReader = new BufferedReader(new FileReader(fileName));
+			bufferedReader = new BufferedReader(new FileReader(file));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			log.log(Level.SEVERE, "Error while loading graph file resources " + file.getName(), e);
 			return null;
 		}
 
@@ -70,6 +70,7 @@ public class TuringGraphMapper {
 		do {
 			dataString = bufferedReader.readLine();
 			if (dataString == null) { // file has not proper format
+				log.log(Level.SEVERE, "Error while processing graph file. File has not proper format.");
 				return null;
 			}
 			if (dataString.startsWith("fill symbol")) {
@@ -86,24 +87,26 @@ public class TuringGraphMapper {
 
 		dataString = bufferedReader.readLine();
 		if (dataString == null) {
+			log.log(Level.SEVERE, "Error while processing graph file. File has not proper format.");
 			return null;
 		}
 		stok = new StringTokenizer(dataString);
 
 		// get all nodes
 		do {
-
 			if (dataString.startsWith("//") || stok.countTokens() == 0) {
 				dataString = bufferedReader.readLine();
 				if (dataString == null) {
+					log.log(Level.SEVERE, "Error while processing graph file. File has not proper format.");
 					return null;
 				}
 				stok = new StringTokenizer(dataString);
 				line++;
 				continue;
 			}
+
 			if ((stok.countTokens() != TuringNode.FIELDS)) {
-				// wrong number of parameters in line
+				log.log(Level.SEVERE, "Error while processing graph file. Wrong number of parameters in line.");
 				return null;
 			}
 
@@ -112,18 +115,18 @@ public class TuringGraphMapper {
 
 			// get halt status - direction
 			dataString = stok.nextToken().toUpperCase();
-			if (dataString.equals("L")) {
+			if (dataString.equals("L"))
 				action = TuringNode.LEFT;
-			} else if (dataString.equals("R")) {
+			else if (dataString.equals("R"))
 				action = TuringNode.RIGHT;
-			} else if (dataString.equals("H")) {
+			else if (dataString.equals("H"))
 				action = TuringNode.HALT;
-			} else if (dataString.equals("Y")) {
+			else if (dataString.equals("Y"))
 				action = TuringNode.ACCEPT;
-			} else if (dataString.equals("N")) {
+			else if (dataString.equals("N"))
 				action = TuringNode.REJECT;
-			} else {
-				// there is unknown direction symbol in line
+			else {
+				log.log(Level.SEVERE, "Error while processing graph file. There is unknown direction symbol in line.");
 				return null;
 			}
 
@@ -131,7 +134,7 @@ public class TuringGraphMapper {
 			try {
 				nodeXCord = Double.parseDouble(dataString);
 			} catch (NumberFormatException e) {
-				// there is not valid x coordinate
+				log.log(Level.SEVERE, "Error while processing graph file. There is not valid x coordinate.", e);
 				return null;
 			}
 
@@ -139,7 +142,7 @@ public class TuringGraphMapper {
 			try {
 				nodeYCord = Double.parseDouble(dataString);
 			} catch (NumberFormatException e) {
-				// there is not valid y coordinate
+				log.log(Level.SEVERE, "Error while processing graph file. There is not valid y coordinate.", e);
 				return null;
 			}
 
@@ -148,6 +151,7 @@ public class TuringGraphMapper {
 
 			dataString = bufferedReader.readLine();
 			if (dataString == null) {
+				log.log(Level.SEVERE, "Error while processing graph file. File has not proper format.");
 				return null;
 			}
 			stok = new StringTokenizer(dataString);
@@ -157,6 +161,7 @@ public class TuringGraphMapper {
 
 		dataString = bufferedReader.readLine();
 		if (dataString == null) {
+			log.log(Level.SEVERE, "Error while processing graph file. File has not proper format.");
 			return null;
 		}
 		stok = new StringTokenizer(dataString);
@@ -184,7 +189,7 @@ public class TuringGraphMapper {
 			}
 
 			if (stok.countTokens() != 5 && stok.countTokens() != 4) {
-				// wrong number of params
+				log.log(Level.SEVERE, "Error while processing graph file. Wrong number of parameters in line.");
 				return null;
 			}
 			oldState = stok.nextToken();
@@ -211,9 +216,9 @@ public class TuringGraphMapper {
 				}
 				edges.add(new TuringEdge(oldState, newState, oldSymbol, newSymbol, curve));
 			} else {
-				@SuppressWarnings("unused")
-				String err = "This edge rejected: " + oldState + " " + newState + " " + oldSymbol + " " + newSymbol
+				String warning = "This edge rejected: " + oldState + " " + newState + " " + oldSymbol + " " + newSymbol
 						+ ": and not needed";
+				log.log(Level.WARNING, warning);
 			}
 
 		} while (!dataString.toLowerCase().startsWith("tapes"));
@@ -252,6 +257,7 @@ public class TuringGraphMapper {
 			defaultTape = new Tape(tapes.get(0));
 		}
 
+		log.log(Level.INFO, "Mapping file " + file.getAbsolutePath() + " to graph success");
 		return new TuringGraph(nodes, edges);
 	}
 }
