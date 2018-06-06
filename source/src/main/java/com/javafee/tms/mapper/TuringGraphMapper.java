@@ -233,29 +233,29 @@ public class TuringGraphMapper {
 		dataString = bufferedReader.readLine();
 		if (dataString == null) {
 			defaultTape = new Tape("[" + Tape.getFillSymbol() + "]");
-		} 
-		
-		else {
-		stok = new StringTokenizer(dataString);
+		}
 
-		do {
-			line++;
-			if (dataString.startsWith("//") || stok.countTokens() == 0) {
+		else {
+			stok = new StringTokenizer(dataString);
+
+			do {
+				line++;
+				if (dataString.startsWith("//") || stok.countTokens() == 0) {
+					dataString = bufferedReader.readLine();
+					if (dataString == null) {
+						break;
+					}
+					stok = new StringTokenizer(dataString);
+					continue;
+				}
+				tapes.add(dataString);
 				dataString = bufferedReader.readLine();
 				if (dataString == null) {
 					break;
 				}
 				stok = new StringTokenizer(dataString);
-				continue;
-			}
-			tapes.add(dataString);
-			dataString = bufferedReader.readLine();
-			if (dataString == null) {
-				break;
-			}
-			stok = new StringTokenizer(dataString);
-		} while (true);
-		
+			} while (true);
+
 		}
 
 		if (tapes.size() == 0) {

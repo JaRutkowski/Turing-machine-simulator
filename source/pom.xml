@@ -21,7 +21,7 @@
 
 	<properties>
 		<java.version>10</java.version>
-		<lombok.version>1.16.20</lombok.version>
+		<lombok.version>1.16.22</lombok.version>
 		<springbootJavafxSupport.version>2.1.6</springbootJavafxSupport.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

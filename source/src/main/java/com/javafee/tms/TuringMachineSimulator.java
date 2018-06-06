@@ -21,6 +21,7 @@ public class TuringMachineSimulator extends Application {
 	public static void main(final String[] args) {
 		Application.launch(args);
 	}
+
 	private ConfigurableApplicationContext springContext;
 
 	private Parent rootNode;
