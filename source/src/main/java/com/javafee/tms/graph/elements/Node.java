@@ -2,18 +2,26 @@ package com.javafee.tms.graph.elements;
 
 import java.util.List;
 
-abstract public class Node implements Coordinates {
+abstract public class Node {
 
-	private int number;
+	private Integer number;
 	private String name;
-	private List<Node> neighbors;
+	private List<Integer> neighbors;
 
-	public Node(int number, String name) {
+	public Node(String name) {
+		this.name = name;
+	}
+
+	public Node(Integer number) {
+		this.number = number;
+	}
+
+	public Node(Integer number, String name) {
 		this.number = number;
 		this.name = name;
 	}
 
-	public Node(int number, String name, List<Node> neighbors) {
+	public Node(Integer number, String name, List<Integer> neighbors) {
 		this.number = number;
 		this.name = name;
 		this.neighbors = neighbors;
@@ -23,7 +31,7 @@ abstract public class Node implements Coordinates {
 		return number;
 	}
 
-	public void setNumber(int number) {
+	public void setNumber(Integer number) {
 		this.number = number;
 	}
 
@@ -35,11 +43,11 @@ abstract public class Node implements Coordinates {
 		this.name = name;
 	}
 
-	public List<Node> getNeighbors() {
+	public List<Integer> getNeighbors() {
 		return neighbors;
 	}
 
-	public void setNeighbors(List<Node> neighbors) {
+	public void setNeighbors(List<Integer> neighbors) {
 		this.neighbors = neighbors;
 	}
 
