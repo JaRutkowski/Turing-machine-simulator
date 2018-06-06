@@ -1,14 +1,21 @@
 package com.javafee.tms.controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.javafee.tms.components.utils.FileComponent;
+import com.javafee.tms.graph.Graph;
+import com.javafee.tms.services.mapper.TuringGraphMapper;
+import com.javafee.tms.utils.Dialog;
+import com.javafee.tms.utils.Params;
+import com.javafee.tms.utils.SystemProperties;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -32,6 +39,9 @@ public class MainFxmlController {
 
 	@Autowired
 	private FileComponent fileComponent;
+
+	@Autowired
+	private TuringGraphMapper turingGraphMapper;
 
 	@FXML
 	public void initialize() {
@@ -63,7 +73,26 @@ public class MainFxmlController {
 
 	@FXML
 	public void onClickMenuItemLoad() {
-		log.info(fileComponent.chooseFile().getName());
+		File file = fileComponent.chooseFile();
+
+		if (file != null && ".graph".equals(FilenameUtils.getExtension(file.getAbsolutePath()))) {
+			try {
+				Graph graph = turingGraphMapper.getGraph(file);
+				if (graph != null)
+					Params.getInstance().add("CURRENT_GRAPH", graph);
+				else
+					Dialog.displayErrorDialog(
+							SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadHeader"),
+							SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadContent"));
+			} catch (IOException e) {
+				log.log(Level.SEVERE, "Error while loading graph to Params", e);
+				Dialog.displayExceptionDialog(
+						SystemProperties.getResourceBundle().getString("dialog.exceptionDialogHeader"), null,
+						e.getMessage());
+			}
+		} else
+			Dialog.displayErrorDialog(SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadHeader"),
+					SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadContent"));
 	}
 
 	@FXML

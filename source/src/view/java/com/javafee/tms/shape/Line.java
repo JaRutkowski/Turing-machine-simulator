@@ -25,7 +25,7 @@ public final class Line {
 		this.secondPoint = secondPoint;
 		this.color = UI_DEFAULT_COLOR;
 	}
-	
+
 	public Line(Point2D firstPoint, Point2D secondPoint, double radius) {
 		this.firstPoint = firstPoint;
 		this.secondPoint = secondPoint;
@@ -38,7 +38,7 @@ public final class Line {
 		graphicContext.setStroke(color);
 		graphicContext.strokeLine(firstPoint.getX(), firstPoint.getY(), secondPoint.getX(), secondPoint.getY());
 	}
-	
+
 	public void draw(GraphicsContext graphicContext, double radius) {
 		graphicContext.setLineWidth(4);
 		graphicContext.setStroke(color);
@@ -59,5 +59,5 @@ public final class Line {
 		return " (x,y) = (" + firstPoint.getX() + ", " + firstPoint.getY() + ")" + " (x,y) = (" + secondPoint.getX()
 				+ ", " + secondPoint.getY() + ")" + radius != null ? ", radius = " + radius : "";
 	}
-	
+
 }
