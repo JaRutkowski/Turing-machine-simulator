@@ -21,6 +21,7 @@
 
 	<properties>
 		<java.version>10</java.version>
+		<build.helper.maven.plugin.version>3.0.0</build.helper.maven.plugin.version>
 		<lombok.version>1.16.22</lombok.version>
 		<springbootJavafxSupport.version>2.1.6</springbootJavafxSupport.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -57,11 +58,26 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>true</executable>
-				</configuration>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/java</source>
+								<source>src/main/resources</source>
+								<source>src/view/java</source>
+								<source>src/controller/java</source>
+								<source>src/model/java</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
