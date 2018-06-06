@@ -75,7 +75,7 @@ public class MainFxmlController {
 	public void onClickMenuItemLoad() {
 		File file = fileComponent.chooseFile();
 
-		if (file != null && ".graph".equals(FilenameUtils.getExtension(file.getAbsolutePath()))) {
+		if (file != null) {
 			try {
 				Graph graph = turingGraphMapper.getGraph(file);
 				if (graph != null)
@@ -90,9 +90,7 @@ public class MainFxmlController {
 						SystemProperties.getResourceBundle().getString("dialog.exceptionDialogHeader"), null,
 						e.getMessage());
 			}
-		} else
-			Dialog.displayErrorDialog(SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadHeader"),
-					SystemProperties.getResourceBundle().getString("dialog.errorDialogLoadContent"));
+		}
 	}
 
 	@FXML

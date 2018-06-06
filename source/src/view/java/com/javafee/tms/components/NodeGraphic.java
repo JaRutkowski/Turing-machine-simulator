@@ -1,5 +1,5 @@
 package com.javafee.tms.components;
 
-public class GraphNode {
+public class NodeGraphic {
 
 }

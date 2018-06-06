@@ -13,31 +13,31 @@ public class DirectedGraphGraphic {
 
 	}
 
-	protected GraphNode insertItem(GraphNode tNode, Circle newCircle) {
-		return new GraphNode();
+	protected NodeGraphic insertItem(NodeGraphic tNode, Circle newCircle) {
+		return new NodeGraphic();
 	}
 
 	public Integer retrieveItem(Integer searchKey) {
-		return retrieveItem(new GraphNode(), searchKey);
+		return retrieveItem(new NodeGraphic(), searchKey);
 	}
 
 	public void deleteItem(Integer searchKey) {
-		deleteItem(new GraphNode(), searchKey);
+		deleteItem(new NodeGraphic(), searchKey);
 	}
 
-	public Circle findLeftmost(GraphNode tNode) {
+	public Circle findLeftmost(NodeGraphic tNode) {
 		return findLeftmost(tNode);
 	}
 
-	public void setResetColor(GraphNode tNode) {
+	public void setResetColor(NodeGraphic tNode) {
 		resetColor(tNode);
 	}
 
-	public int getHeight(GraphNode root) {
+	public int getHeight(NodeGraphic root) {
 		return 0;
 	}
 
-	public int getSize(GraphNode root) {
+	public int getSize(NodeGraphic root) {
 		return 0;
 	}
 
@@ -45,15 +45,15 @@ public class DirectedGraphGraphic {
 
 	}
 
-	private Integer retrieveItem(GraphNode tNode, Integer searchKey) {
+	private Integer retrieveItem(NodeGraphic tNode, Integer searchKey) {
 		return 0;
 	}
 
-	private GraphNode deleteItem(GraphNode tNode, Integer searchKey) {
-		return new GraphNode();
+	private NodeGraphic deleteItem(NodeGraphic tNode, Integer searchKey) {
+		return new NodeGraphic();
 	}
 
-	private void resetColor(GraphNode tNode) {
+	private void resetColor(NodeGraphic tNode) {
 
 	}
 
