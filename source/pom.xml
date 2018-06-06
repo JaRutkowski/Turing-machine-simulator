@@ -70,7 +70,6 @@
 						<configuration>
 							<sources>
 								<source>src/main/java</source>
-								<source>src/main/resources</source>
 								<source>src/view/java</source>
 								<source>src/controller/java</source>
 								<source>src/model/java</source>
