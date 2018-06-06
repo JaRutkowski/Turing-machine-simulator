@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafee.tms.controllers.tm.TMPaneController">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="125.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="35.99999084472656" minHeight="10.0" prefHeight="35.99999084472656" valignment="TOP" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="273.6000122070312" minHeight="10.0" prefHeight="198.00000915527343" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="377.5999816894531" minHeight="10.0" prefHeight="183.1999816894531" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="267.1999572753906" minHeight="10.0" prefHeight="103.19999999999999" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="172.79996337890623" minHeight="10.0" prefHeight="60.799999999999955" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="0.0" minHeight="-Infinity" prefHeight="0.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="0.0" minHeight="-Infinity" prefHeight="0.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<CheckBox fx:id="checkBoxShowMachineConfiguration" mnemonicParsing="false" onAction="#onChangeCheckBoxShowMachineConfiguration" prefHeight="18.0" prefWidth="602.0" selected="true" text="%tmPane.checkBoxShowMachineConfiguration" GridPane.columnSpan="5">
+			<padding>
+				<Insets left="13.0" top="10.0" />
+			</padding>
+		</CheckBox>
+		<AnchorPane fx:id="anchorPaneGraphPane" prefHeight="522.0" prefWidth="267.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="2">
+			<children>
+				<fx:include fx:id="graphPane" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="../GraphPane.fxml" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+			</children>
+			<GridPane.margin>
+				<Insets right="5.0" />
+			</GridPane.margin>
+		</AnchorPane>
+		<AnchorPane maxHeight="-Infinity" prefHeight="586.0" prefWidth="339.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+			<children>
+				<fx:include fx:id="tmConfigurationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="TMConfigurationPane.fxml" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="10.0" />
+			</children>
+			<GridPane.margin>
+				<Insets right="5.0" />
+			</GridPane.margin>
+		</AnchorPane>
+		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="3">
+			<children>
+				<AnchorPane fx:id="tmTapePane" maxHeight="-Infinity" prefHeight="586.0" prefWidth="339.0">
+					<children>
+						<fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="TMTapePane.fxml" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+					</children>
+					<HBox.margin>
+						<Insets top="3.0" />
+					</HBox.margin>
+				</AnchorPane>
+			</children>
+			<GridPane.margin>
+				<Insets top="35.0" />
+			</GridPane.margin>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="4">
+			<children>
+				<fx:include fx:id="tmNavigationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="TMNavigationPane.fxml" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+			</children>
+		</HBox>
+	</children>
+</GridPane>
